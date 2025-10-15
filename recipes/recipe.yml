@@ -34,7 +34,7 @@ modules:
       - xxd
       - htop
       - nano
-      - nvim
+      - neovim
 
       # Shell
       - zsh
@@ -64,7 +64,7 @@ modules:
       - blueman
 
       # Themes and fonts
-      - adw-gtk3-dark
+      - adw-gtk3-theme
       - adwaita-icon-theme
       - jetbrains-mono-fonts-all
       - google-noto-emoji-fonts
