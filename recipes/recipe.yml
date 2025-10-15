@@ -103,3 +103,7 @@ modules:
       - scope: user
 
   - type: signing
+  - type: chezmoi
+    repository: "https://github.com/TheFocusDevHUN/dotfiles" # my dotfiles repo
+    all-users: true # make users have to enable chezmoi manually
+    file-conflict-policy: skip # override changed files with those from the repo
