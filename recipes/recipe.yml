@@ -1,45 +1,105 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
-name: template
-# description will be included in the image's metadata
-description: This is my personal OS image.
 
+name: workstation-os-tfd
+# description will be included in the image's metadata
+description: My custom workstation OS setup based on Universal Blue with Hyprland
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/base-main
+image-version: 42
 
 # module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        destination: / # copies files/system/* into your image's root folder /
 
-  - type: dnf
+  - type: rpm-ostree
     repos:
-      copr:
-        - atim/starship
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-42/atim-starship-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-42/erikreider-SwayNotificationCenter-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-42/wezfurlong-wezterm-nightly-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-42/zeno-scrcpy-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/g3tchoo/prismlauncher/repo/fedora-42/g3tchoo-prismlauncher-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/markupstart/SwayOSD/repo/fedora-42/markupstart-SwayOSD-fedora-42.repo
+      - https://copr.fedorainfracloud.org/coprs/lihaohong/scc/repo/fedora-42/lihaohong-scc-fedora-42.repo
     install:
-      packages:
-        - micro
-        - starship
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      # Core utilities
+      - git
+      - git-lfs
+      - scc
+      - curl
+      - xxd
+      - htop
+      - nano
+      - nvim
+
+      # Shell
+      - zsh
+      - starship
+
+      # Media
+      - vlc
+      - mpv
+
+      # Hyprland and Wayland tools
+      - hyprland
+      - waybar
+      - rofi
+      - swaync
+      - wezterm
+
+      # System utilities
+      - pipewire
+      - wireplumber
+      - pipewire-pulseaudio
+      - pavucontrol
+      - network-manager-applet
+      - distrobox
+      - nwg-look
+      - xfce4-power-manager
+      - nemo
+      - blueman
+
+      # Themes and fonts
+      - adw-gtk3-dark
+      - adwaita-icon-theme
+      - jetbrains-mono-fonts-all
+      - google-noto-emoji-fonts
+      - adwaita-fonts-all
+
+      # Applications
+      - prismlauncher
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - JetBrainsMono
+
+  - type: akmods
+    base: main
+    install:
+      - v4l2loopback
+
+  - type: systemd
+    system:
+      enabled:
+        - podman.socket
 
   - type: default-flatpaks
     configurations:
-      - notify: true # Send notification after install/uninstall is finished (true/false)
+      - notify: true
         scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+        install:
+          - com.discordapp.Discord
+          - com.bitwarden.desktop
+          - md.obsidian.Obsidian
+          - com.valvesoftware.Steam
+          - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+          - org.chromium.Chromium
+          - com.brave.Browser
+      - scope: user
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: signing
