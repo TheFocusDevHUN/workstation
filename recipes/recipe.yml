@@ -49,6 +49,7 @@ modules:
       - hyprland
       - waybar
       - rofi
+      - swww
       - swaync
       - wezterm
 
@@ -101,7 +102,6 @@ modules:
           - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
           - org.chromium.Chromium
           - com.brave.Browser
-      - scope: user
 
   - type: signing
   - type: chezmoi
