@@ -29,6 +29,7 @@ modules:
       # Core utilities
       - git
       - git-lfs
+      - glibc
       - scc
       - curl
       - xxd
@@ -90,7 +91,7 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: false
         scope: system
         install:
           - com.discordapp.Discord
