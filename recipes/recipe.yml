@@ -27,7 +27,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/g3tchoo/prismlauncher/repo/fedora-42/g3tchoo-prismlauncher-fedora-42.repo
       - https://copr.fedorainfracloud.org/coprs/markupstart/SwayOSD/repo/fedora-42/markupstart-SwayOSD-fedora-42.repo
       - https://copr.fedorainfracloud.org/coprs/lihaohong/scc/repo/fedora-42/lihaohong-scc-fedora-42.repo
-      - https://packages.microsoft.com/yumrepos/vscode
+      - https://packages.microsoft.com/yumrepos/vscode/config.repo
     install:
       # Core utilities
       - git
