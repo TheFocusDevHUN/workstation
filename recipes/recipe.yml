@@ -14,8 +14,6 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* into your image's root folder /
-      - source: greetd.conf
-        destination: /etc/greetd/config.conf
 
   - type: rpm-ostree
     keys:
