@@ -95,7 +95,6 @@ modules:
     system:
       enabled:
         - podman.socket
-        - graphical.target
         - greetd.service
 
   - type: default-flatpaks
