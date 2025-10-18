@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
-name: workstation-os-tfd
+name: workstation-os
 # description will be included in the image's metadata
 description: My custom workstation OS setup based on Universal Blue with Hyprland
 # the base image to build on top of (FROM) and the version tag to use
@@ -14,8 +14,12 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* into your image's root folder /
+      - source: greetd.conf
+        destination: /etc/greetd/config.conf
 
   - type: rpm-ostree
+    keys:
+      - https://packages.microsoft.com/keys/microsoft.asc
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-42/atim-starship-fedora-42.repo
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-42/erikreider-SwayNotificationCenter-fedora-42.repo
@@ -25,6 +29,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/g3tchoo/prismlauncher/repo/fedora-42/g3tchoo-prismlauncher-fedora-42.repo
       - https://copr.fedorainfracloud.org/coprs/markupstart/SwayOSD/repo/fedora-42/markupstart-SwayOSD-fedora-42.repo
       - https://copr.fedorainfracloud.org/coprs/lihaohong/scc/repo/fedora-42/lihaohong-scc-fedora-42.repo
+      - https://packages.microsoft.com/yumrepos/vscode
     install:
       # Core utilities
       - git
@@ -36,6 +41,7 @@ modules:
       - htop
       - nano
       - neovim
+      - code
 
       # Shell
       - zsh
@@ -47,6 +53,8 @@ modules:
 
       # Hyprland and Wayland tools
       - hyprland
+      - uwsm
+      - greetd
       - waybar
       - rofi
       - swww
@@ -89,6 +97,8 @@ modules:
     system:
       enabled:
         - podman.socket
+        - graphical.target
+        - greetd.service
 
   - type: default-flatpaks
     configurations:
@@ -105,6 +115,6 @@ modules:
 
   - type: signing
   - type: chezmoi
-    repository: "https://github.com/TheFocusDevHUN/dotfiles" # my dotfiles repo
-    all-users: true # make users have to enable chezmoi manually
-    file-conflict-policy: skip # override changed files with those from the repo
+    repository: "https://github.com/TheFocusDevHUN/dotfiles"
+    all-users: true
+    file-conflict-policy: skip
