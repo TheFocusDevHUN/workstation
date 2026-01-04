@@ -31,6 +31,7 @@ modules:
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
     install:
+      skip-unavailable: true
       packages:
         # Core utilities
         - git
@@ -42,6 +43,7 @@ modules:
         - nano
         - neovim
         - code
+        - zed
 
         # Shell
         - zsh
@@ -60,8 +62,8 @@ modules:
         - swww
         - swaync
         - wezterm
-
         # System utilities
+        - kvantum
         - pipewire
         - wireplumber
         - pipewire-pulseaudio
@@ -72,7 +74,6 @@ modules:
         - xfce4-power-manager
         - nemo
         - blueman
-
         # Themes and fonts
         - materia-gtk-theme
         - materia-kde-kvantum
