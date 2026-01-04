@@ -90,11 +90,6 @@ modules:
       nerd-fonts:
         - JetBrainsMono
 
-  - type: akmods
-    base: main
-    install:
-      - v4l2loopback
-
   - type: systemd
     system:
       enabled:
