@@ -6,7 +6,7 @@ name: workstation-os
 description: My custom workstation OS setup based on Universal Blue with Hyprland
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/base-main
-image-version: 42
+image-version: 43
 
 # module configuration, executed in order
 modules:
@@ -14,26 +14,27 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* into your image's root folder /
-
-  - type: rpm-ostree
-    keys:
-      - https://packages.microsoft.com/keys/microsoft.asc
+  
+  - type: dnf
     repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-42/atim-starship-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-42/erikreider-SwayNotificationCenter-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-42/solopasha-hyprland-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-42/wezfurlong-wezterm-nightly-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/zeno/scrcpy/repo/fedora-42/zeno-scrcpy-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/g3tchoo/prismlauncher/repo/fedora-42/g3tchoo-prismlauncher-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/markupstart/SwayOSD/repo/fedora-42/markupstart-SwayOSD-fedora-42.repo
-      - https://copr.fedorainfracloud.org/coprs/lihaohong/scc/repo/fedora-42/lihaohong-scc-fedora-42.repo
-      - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      keys:
+      - https://packages.microsoft.com/keys/microsoft.asc
+      nonfree: rpmfusion
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      copr:
+        - atim/starship
+        - sdegler/hyprland
+        - wezfurlong/wezterm-nightly
+        - zeno/scrcpy
+        - erikreider/SwayNotificationCenter
+        - g3tchoo/prismlauncher
     install:
       # Core utilities
       - git
       - git-lfs
       - glibc
-      - scc
       - curl
       - xxd
       - htop
@@ -72,8 +73,9 @@ modules:
       - blueman
 
       # Themes and fonts
-      - adw-gtk3-theme
-      - adwaita-icon-theme
+      - materia-gtk-theme
+      - materia-kde-kvantum
+      - papirus-icon-theme
       - jetbrains-mono-fonts-all
       - google-noto-emoji-fonts
       - adwaita-fonts-all
