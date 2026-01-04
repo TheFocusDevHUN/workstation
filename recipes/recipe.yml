@@ -14,11 +14,11 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* into your image's root folder /
-  
+
   - type: dnf
     repos:
       keys:
-      - https://packages.microsoft.com/keys/microsoft.asc
+        - https://packages.microsoft.com/keys/microsoft.asc
       nonfree: rpmfusion
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
@@ -31,57 +31,58 @@ modules:
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
     install:
-      # Core utilities
-      - git
-      - git-lfs
-      - glibc
-      - curl
-      - xxd
-      - htop
-      - nano
-      - neovim
-      - code
+      packages:
+        # Core utilities
+        - git
+        - git-lfs
+        - glibc
+        - curl
+        - xxd
+        - htop
+        - nano
+        - neovim
+        - code
 
-      # Shell
-      - zsh
-      - starship
+        # Shell
+        - zsh
+        - starship
 
-      # Media
-      - vlc
-      - mpv
+        # Media
+        - vlc
+        - mpv
 
-      # Hyprland and Wayland tools
-      - hyprland
-      - uwsm
-      - greetd
-      - waybar
-      - rofi
-      - swww
-      - swaync
-      - wezterm
+        # Hyprland and Wayland tools
+        - hyprland
+        - uwsm
+        - greetd
+        - waybar
+        - rofi
+        - swww
+        - swaync
+        - wezterm
 
-      # System utilities
-      - pipewire
-      - wireplumber
-      - pipewire-pulseaudio
-      - pavucontrol
-      - network-manager-applet
-      - distrobox
-      - nwg-look
-      - xfce4-power-manager
-      - nemo
-      - blueman
+        # System utilities
+        - pipewire
+        - wireplumber
+        - pipewire-pulseaudio
+        - pavucontrol
+        - network-manager-applet
+        - distrobox
+        - nwg-look
+        - xfce4-power-manager
+        - nemo
+        - blueman
 
-      # Themes and fonts
-      - materia-gtk-theme
-      - materia-kde-kvantum
-      - papirus-icon-theme
-      - jetbrains-mono-fonts-all
-      - google-noto-emoji-fonts
-      - adwaita-fonts-all
+        # Themes and fonts
+        - materia-gtk-theme
+        - materia-kde-kvantum
+        - papirus-icon-theme
+        - jetbrains-mono-fonts-all
+        - google-noto-emoji-fonts
+        - adwaita-fonts-all
 
-      # Applications
-      - prismlauncher
+        # Applications
+        - prismlauncher
 
   - type: fonts
     fonts:
