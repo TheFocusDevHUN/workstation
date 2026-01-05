@@ -88,11 +88,11 @@ modules:
         # Applications
         - prismlauncher
 
-  - type: script
-    scripts:
-      - install-gtk-theme.sh
-      - install-icon-theme.sh
-      - install-kv-sddm-theme.sh
+  #- type: script
+  #  scripts:
+  #    - install-gtk-theme.sh
+  #    - install-icon-theme.sh
+  #    - install-kv-sddm-theme.sh
 
   - type: fonts
     fonts:
