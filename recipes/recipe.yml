@@ -56,7 +56,7 @@ modules:
         # Hyprland and Wayland tools
         - hyprland
         - uwsm
-        - greetd
+        - sddm
         - waybar
         - rofi
         - swww
@@ -64,6 +64,10 @@ modules:
         - wezterm
         # System utilities
         - kvantum
+        - qt5ct
+        - qt6ct
+        - engrampa
+        - atril
         - pipewire
         - wireplumber
         - pipewire-pulseaudio
@@ -73,10 +77,9 @@ modules:
         - nwg-look
         - xfce4-power-manager
         - nemo
+        - simple-scan
         - blueman
         # Themes and fonts
-        - materia-gtk-theme
-        - materia-kde-kvantum
         - papirus-icon-theme
         - jetbrains-mono-fonts-all
         - google-noto-emoji-fonts
@@ -85,8 +88,18 @@ modules:
         # Applications
         - prismlauncher
 
+  - type: script
+    scripts:
+      - install-gtk-theme.sh
+      - install-icon-theme.sh
+      - install-kv-sddm-theme.sh
+
   - type: fonts
     fonts:
+      google-fonts:
+        - Roboto
+        - Inter
+        - NotoEmoji
       nerd-fonts:
         - JetBrainsMono
 
@@ -94,7 +107,7 @@ modules:
     system:
       enabled:
         - podman.socket
-        - greetd.service
+        - sddm.service
 
   - type: default-flatpaks
     configurations:
