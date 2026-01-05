@@ -64,10 +64,16 @@ modules:
         - wezterm
         # System utilities
         - kvantum
+        - gtk-murrine-engine
+        - libadwaita
+        - libadwaita-devel
         - qt5ct
         - qt6ct
         - engrampa
         - atril
+        - eom
+        - pluma
+        - mate-calc
         - pipewire
         - wireplumber
         - pipewire-pulseaudio
@@ -81,6 +87,8 @@ modules:
         - blueman
         # Themes and fonts
         - papirus-icon-theme
+        - gnome-themes-extra
+        - sassc
         - jetbrains-mono-fonts-all
         - google-noto-emoji-fonts
         - adwaita-fonts-all
@@ -88,11 +96,11 @@ modules:
         # Applications
         - prismlauncher
 
-  #- type: script
-  #  scripts:
-  #    - install-gtk-theme.sh
-  #    - install-icon-theme.sh
-  #    - install-kv-sddm-theme.sh
+  - type: script
+    scripts:
+      - install-gtk-theme.sh
+      #- install-icon-theme.sh
+      - install-kv-sddm-theme.sh
 
   - type: fonts
     fonts:
