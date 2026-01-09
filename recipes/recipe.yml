@@ -43,6 +43,7 @@ modules:
         - xxd
         - htop
         - nano
+        - docker-cli
         - neovim
         - code
         - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
@@ -68,6 +69,7 @@ modules:
         - swww
         - swaync
         - wezterm
+        - kitty
         # System utilities
         - kvantum
         - gtk-murrine-engine
@@ -96,7 +98,6 @@ modules:
         - gnome-themes-extra
         - kf6-kirigami
         - plasma5support
-        - plasma-workspace
         - mate-system-monitor
         - sassc
         - jetbrains-mono-fonts-all
