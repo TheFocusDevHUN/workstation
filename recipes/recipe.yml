@@ -33,6 +33,7 @@ modules:
         - g3tchoo/prismlauncher
     install:
       skip-unavailable: true
+      install-weak-deps: false
       packages:
         # Core utilities
         - git
@@ -44,6 +45,7 @@ modules:
         - nano
         - neovim
         - code
+        - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
         - zed
 
         # Shell
@@ -92,6 +94,10 @@ modules:
         # Themes and fonts
         - papirus-icon-theme
         - gnome-themes-extra
+        - kf6-kirigami
+        - plasma5support
+        - plasma-workspace
+        - mate-system-monitor
         - sassc
         - jetbrains-mono-fonts-all
         - google-noto-emoji-fonts
