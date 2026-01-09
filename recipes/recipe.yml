@@ -31,6 +31,9 @@ modules:
         - zeno/scrcpy
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
+    remove:
+      packages:
+        - firefox
     install:
       skip-unavailable: true
       install-weak-deps: false
@@ -44,6 +47,7 @@ modules:
         - htop
         - nano
         - docker-cli
+        - moby-engine
         - neovim
         - code
         - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
