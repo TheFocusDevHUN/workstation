@@ -63,6 +63,7 @@ modules:
 
         # Hyprland and Wayland tools
         - hyprland
+        - hyprland-guiutils
         - uwsm
         - sddm
         - waybar
@@ -72,7 +73,7 @@ modules:
         - elephant
         - swww
         - swaync
-        - wezterm
+        #- wezterm
         - kitty
         # System utilities
         - kvantum
@@ -88,6 +89,9 @@ modules:
         - mate-calc
         - pipewire
         - wireplumber
+        - telnet
+        - netcat
+        - helm
         - pipewire-pulseaudio
         - pavucontrol
         - network-manager-applet
