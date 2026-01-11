@@ -72,6 +72,9 @@ modules:
         - gtk4-layer-shell
         - elephant
         - swww
+        - grim
+        - slurp
+        - swappy
         - swaync
         #- wezterm
         - kitty
@@ -133,7 +136,7 @@ modules:
   - type: systemd
     system:
       enabled:
-        - podman.socket
+        #- podman.socket
         - sddm.service
 
   - type: default-flatpaks
