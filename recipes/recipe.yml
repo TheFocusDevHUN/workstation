@@ -79,6 +79,8 @@ modules:
         #- wezterm
         - kitty
         # System utilities
+        - gnome-keyring
+        - mate-polkit
         - kvantum
         - gtk-murrine-engine
         - libadwaita
