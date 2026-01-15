@@ -80,6 +80,7 @@ modules:
         - kitty
         # System utilities
         - gnome-keyring
+        - gnome-keyring-pam
         - mate-polkit
         - kvantum
         - gtk-murrine-engine
