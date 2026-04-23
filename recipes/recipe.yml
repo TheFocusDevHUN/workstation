@@ -26,8 +26,7 @@ modules:
       copr:
         - atim/starship
         - sdegler/hyprland
-        - errornointernet/walker
-        - wezfurlong/wezterm-nightly
+        - killcrb/ashell
         - zeno/scrcpy
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
@@ -42,6 +41,7 @@ modules:
         - git
         - git-lfs
         - glibc
+        - "gcc-c++"
         - curl
         - xxd
         - htop
@@ -51,7 +51,9 @@ modules:
         - neovim
         - code
         - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+        - https://codeberg.org/GramEditor/gram/releases/download/1.2.0/gram_1.2.0-1_x86_64.rpm
         - zed
+        - android-tools
 
         # Shell
         - zsh
@@ -63,12 +65,19 @@ modules:
 
         # Hyprland and Wayland tools
         - hyprland
+        - xdg-desktop-portal-hyprland
+        - adb
+        - gtk-layer-shell
+        - gtk3-devel
+        - gparted
+        - vicinae
+        - gamescope
         - hyprland-guiutils
         - uwsm
         - sddm
         - waybar
+        - ashell
         - rofi
-        - walker
         - gtk4-layer-shell
         - elephant
         - swww
@@ -80,6 +89,7 @@ modules:
         - kitty
         # System utilities
         - gnome-keyring
+        - system-config-printer
         - gnome-keyring-pam
         - mate-polkit
         - kvantum
