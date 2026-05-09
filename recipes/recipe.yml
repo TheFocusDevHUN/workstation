@@ -43,6 +43,7 @@ modules:
         - git-lfs
         - glibc
         - "gcc-c++"
+        - jemalloc
         - curl
         - xxd
         - htop
