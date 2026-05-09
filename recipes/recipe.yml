@@ -6,7 +6,7 @@ name: workstation-os
 description: My custom workstation OS setup based on Universal Blue with Hyprland
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/base-main
-image-version: 43
+image-version: 44
 
 # module configuration, executed in order
 modules:
@@ -23,10 +23,11 @@ modules:
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://packages.microsoft.com/yumrepos/vscode/config.repo
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
         - atim/starship
         - sdegler/hyprland
-        - killcrb/ashell
+        - errornointernet/quickshell
         - zeno/scrcpy
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
@@ -65,6 +66,9 @@ modules:
 
         # Hyprland and Wayland tools
         - hyprland
+        - repo: copr:copr.fedorainfracloud.org:errornointernet:quickshell
+          packages:
+            - quickshell
         - xdg-desktop-portal-hyprland
         - adb
         - gtk-layer-shell
@@ -76,10 +80,7 @@ modules:
         - uwsm
         - sddm
         - waybar
-        - ashell
-        - rofi
         - gtk4-layer-shell
-        - elephant
         - swww
         - grim
         - slurp
@@ -89,6 +90,9 @@ modules:
         - kitty
         # System utilities
         - gnome-keyring
+        - quickemu
+        - virt-manager
+        - mullvad-vpn
         - system-config-printer
         - gnome-keyring-pam
         - mate-polkit
