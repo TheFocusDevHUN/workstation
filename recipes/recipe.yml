@@ -73,7 +73,7 @@ modules:
         - gtk-layer-shell
         - gtk3-devel
         - gparted
-        - https://repos.fyralabs.com/terrarawhide/vicinae-0:0.20.15-2.fcrawhide.x86_64.rpm
+        - https://repos.fyralabs.com/terra43/vicinae-0:0.20.15-2.fc43.x86_64.rpm
         - gamescope
         - hyprland-guiutils
         - uwsm
