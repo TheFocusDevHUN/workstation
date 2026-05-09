@@ -67,15 +67,13 @@ modules:
 
         # Hyprland and Wayland tools
         - hyprland
-        - repo: copr:copr.fedorainfracloud.org:errornointernet:quickshell
-          packages:
-            - quickshell
+        - quickshell
         - xdg-desktop-portal-hyprland
         - adb
         - gtk-layer-shell
         - gtk3-devel
         - gparted
-        - vicinae
+        - https://repos.fyralabs.com/terrarawhide/vicinae-0:0.20.15-2.fcrawhide.x86_64.rpm
         - gamescope
         - hyprland-guiutils
         - uwsm
