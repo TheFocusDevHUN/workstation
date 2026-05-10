@@ -28,6 +28,7 @@ modules:
         - atim/starship
         - sdegler/hyprland
         - errornointernet/quickshell
+        - quadratech188/vicinae
         - zeno/scrcpy
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
@@ -35,7 +36,7 @@ modules:
       packages:
         - firefox
     install:
-      skip-unavailable: true
+      skip-unavailable: false
       install-weak-deps: false
       packages:
         # Core utilities
@@ -53,7 +54,7 @@ modules:
         - neovim
         - code
         - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
-        - https://codeberg.org/GramEditor/gram/releases/download/1.2.0/gram_1.2.0-1_x86_64.rpm
+        - https://codeberg.org/GramEditor/gram/releases/download/1.2.0/gram_1.2.1-1_x86_64.rpm
         - zed
         - android-tools
 
@@ -73,8 +74,7 @@ modules:
         - gtk-layer-shell
         - gtk3-devel
         - gparted
-        - cmark-gfm
-        - https://repos.fyralabs.com/terra43/vicinae-0:0.20.15-2.fc43.x86_64.rpm
+        - vicinae
         - gamescope
         - hyprland-guiutils
         - uwsm

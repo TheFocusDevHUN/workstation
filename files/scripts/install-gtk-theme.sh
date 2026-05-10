@@ -9,7 +9,7 @@ chmod +x "$TMP_DIR/install.sh"
 SRC_DIR="$TMP_DIR/src"
 DEST_DIR="/usr/share/themes"
 THEME_NAME="Colloid"
-COLOR_VARIANT="-Light"   # Options: -Light, -Dark, or "" for standard
+COLOR_VARIANT=""   # Options: -Light, -Dark, or "" for standard
 SIZE_VARIANT=""          # Options: "" or -Compact
 
 # Ensure sassc exists
