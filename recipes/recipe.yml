@@ -123,7 +123,7 @@ modules:
         - blueman
         # Themes and fonts
         - papirus-icon-theme
-        - gnome-themes-extra
+        #- gnome-themes-extra
         - kf6-kirigami
         - plasma5support
         - mate-system-monitor
