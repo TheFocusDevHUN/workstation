@@ -54,7 +54,7 @@ modules:
         - neovim
         - code
         - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
-        - https://codeberg.org/GramEditor/gram/releases/download/1.2.0/gram_1.2.1-1_x86_64.rpm
+        - https://codeberg.org/GramEditor/gram/releases/download/1.2.1/gram_1.2.1-1_x86_64.rpm
         - zed
         - android-tools
 
