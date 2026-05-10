@@ -69,7 +69,9 @@ modules:
         # Hyprland and Wayland tools
         - hyprland
         - quickshell
+        - xdg-desktop-portal
         - xdg-desktop-portal-hyprland
+        - xdg-desktop-portal-gtk
         - adb
         - gtk-layer-shell
         - gtk3-devel
