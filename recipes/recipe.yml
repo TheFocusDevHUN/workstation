@@ -28,7 +28,7 @@ modules:
         - atim/starship
         - sdegler/hyprland
         - errornointernet/quickshell
-        - quadratech188/vicinae
+        #- quadratech188/vicinae
         - zeno/scrcpy
         - erikreider/SwayNotificationCenter
         - g3tchoo/prismlauncher
@@ -68,11 +68,15 @@ modules:
 
         # Hyprland and Wayland tools
         - hyprland
+        - mangowm
         - quickshell
         - xdg-desktop-portal
+        - xdg-desktop-portal-wlr
         - xdg-desktop-portal-hyprland
         - xdg-desktop-portal-gtk
         - adb
+        - wlr-randr
+        - xwayland-satellite
         - gtk-layer-shell
         - gtk3-devel
         - gparted
