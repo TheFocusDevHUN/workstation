@@ -10,6 +10,12 @@ image-version: 44
 
 # module configuration, executed in order
 modules:
+  - type: os-release
+    properties:
+      ID: workstation-os
+      ID_LIKE: ublue-os
+      NAME: workstationOS
+      PRETTY_NAME: workstationOS
   - type: files
     files:
       - source: system
