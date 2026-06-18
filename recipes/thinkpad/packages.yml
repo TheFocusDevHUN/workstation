@@ -1,0 +1,9 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: dnf
+install:
+  skip-unavailable: false
+  install-weak-deps: false
+  packages:
+    - brightnessctl

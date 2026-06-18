@@ -1,2 +1,2 @@
 # workstationOS
-Custom Fedora atomic flavour with Hyprland
+Custom Fedora atomic flavour

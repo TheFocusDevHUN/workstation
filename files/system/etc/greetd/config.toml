@@ -1,0 +1,3 @@
+[initial_session]
+command = "launch-sway"
+user = "tfd"

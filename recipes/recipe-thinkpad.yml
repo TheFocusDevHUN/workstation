@@ -1,0 +1,43 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+name: workstation-os-thinkpad
+# description will be included in the image's metadata
+description: My custom workstation OS setup based on Universal Blue
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/base-main
+image-version: 44
+
+# module configuration, executed in order
+modules:
+  - type: os-release
+    properties:
+      ID: workstation-os
+      ID_LIKE: ublue-os
+      NAME: workstationOS
+      PRETTY_NAME: workstationOS
+
+  - from-file: common/dotfiles.yml
+  - from-file: common/flatpaks.yml
+  - from-file: common/fonts.yml
+  - from-file: common/linuxbrew.yml
+  - from-file: common/packages.yml
+  - from-file: thinkpad/packages.yml
+
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* into your image's root folder /
+
+  - type: script
+    scripts:
+      - install-gtk-theme.sh
+      #- install-icon-theme.sh
+      - install-kv-sddm-theme.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - greetd.service
+
+  - type: signing

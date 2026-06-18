@@ -1,0 +1,11 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: fonts
+fonts:
+  google-fonts:
+    - Roboto
+    - Inter
+    - NotoEmoji
+  nerd-fonts:
+    - JetBrainsMono

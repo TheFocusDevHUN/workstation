@@ -1,0 +1,13 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: default-flatpaks
+configurations:
+  - notify: false
+    scope: system
+    install:
+      - com.discordapp.Discord
+      - com.bitwarden.desktop
+      - md.obsidian.Obsidian
+      - org.chromium.Chromium
+      - com.brave.Browser

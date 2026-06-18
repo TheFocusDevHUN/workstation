@@ -1,0 +1,121 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: dnf
+repos:
+  nonfree: rpmfusion
+  files:
+    - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    - https://repository.mullvad.net/rpm/stable/mullvad.repo
+  copr:
+    - atim/starship
+    - sdegler/hyprland
+    - zeno/scrcpy
+    - erikreider/SwayNotificationCenter
+    - g3tchoo/prismlauncher
+remove:
+  packages:
+    - firefox
+install:
+  skip-unavailable: false
+  install-weak-deps: false
+  packages:
+    # Core utilities
+    - git
+    - git-lfs
+    - glibc
+    - "gcc-c++"
+    - jemalloc
+    - curl
+    - xxd
+    - htop
+    - nano
+    - neovim
+    - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+    - https://codeberg.org/GramEditor/gram/releases/download/1.2.1/gram_1.2.1-1_x86_64.rpm
+    - zed
+    - android-tool
+    - ffmpeg
+    - gstreamer1-plugins-good
+    - gstreamer1-plugins-bad-free
+    - gstreamer1-libav
+    # Shell
+    - zsh
+    - starshi
+    # Media
+    - vlc
+    - mpv
+    - hyprpicker
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
+    - layer-shell-qt
+    - xdg-desktop-portal-gtk
+    - adb
+    - wlr-randr
+    - xwayland-satellite
+    - gtk-layer-shell
+    - gtk3-devel
+    - gparted
+    - vicinae
+    - gamescope
+    - uwsm
+    - sddm
+    - waybar
+    - clang
+    - greetd
+    - gtk4-layer-shell
+    - swww
+    - grim
+    - slurp
+    - swappy
+    - sway
+    - swaylock
+    - swaync
+    - kitty
+    # System utilities
+    - gnome-keyring
+    - quickemu
+    - virt-manager
+    - mullvad-vpn
+    - system-config-printer
+    - gnome-keyring-pam
+    - mate-polkit
+    - kvantum
+    - gtk-murrine-engine
+    - libadwaita
+    - libadwaita-devel
+    - qt5ct
+    - qt6ct
+    - engrampa
+    - atril
+    - eom
+    - pluma
+    - mate-calc
+    - pipewire
+    - wireplumber
+    - telnet
+    - netcat
+    - helm
+    - fuse-libs
+    - libvirt
+    - pipewire-pulseaudio
+    - pavucontrol
+    - network-manager-applet
+    - distrobox
+    - nwg-look
+    - xfce4-power-manager
+    - nemo
+    - simple-scan
+    - blueman
+    # Themes and fonts
+    - papirus-icon-theme
+    - advaita-icon-theme
+    - https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/h/highcontrast-icon-theme-3.28-23.fc43.noarch.rpm
+    - https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/g/gnome-themes-extra-3.28-23.fc43.x86_64.rpm
+    - mate-system-monitor
+    - sassc
+    - jetbrains-mono-fonts-all
+    - google-noto-emoji-fonts
+    - adwaita-fonts-all
+    # Applications
+    - prismlauncher

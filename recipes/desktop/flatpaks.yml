@@ -1,0 +1,10 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: default-flatpaks
+configurations:
+  - notify: false
+    scope: system
+    install:
+      - com.valvesoftware.Steam
+      - com.valvesoftware.Steam.CompatibilityTool.Proton-GE

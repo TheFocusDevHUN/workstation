@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+
+type: dnf
+repos:
+  copr: 
+    - g3tchoo/prismlauncher
+install:
+  skip-unavailable: false
+  install-weak-deps: false
+  packages:
+    - prismlauncher
