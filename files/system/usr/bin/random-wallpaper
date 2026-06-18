@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+WALLPAPERS=($HOME/usr/share/backgrounds/various/*.jpg)
+RANDOM_WP=${WALLPAPERS[RANDOM % ${#WALLPAPERS[@]}]}
+
+swww img "$RANDOM_WP" --transition-type fade --transition-step 1 --transition-fps 60
+

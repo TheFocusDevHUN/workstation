@@ -1,3 +1,10 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "agreety --cmd zsh"
+user = "tfd"
+
 [initial_session]
 command = "launch-sway"
 user = "tfd"
