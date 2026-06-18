@@ -34,14 +34,14 @@ install:
     - https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
     - https://codeberg.org/GramEditor/gram/releases/download/1.2.1/gram_1.2.1-1_x86_64.rpm
     - zed
-    - android-tool
+    - android-tools
     - ffmpeg
     - gstreamer1-plugins-good
     - gstreamer1-plugins-bad-free
     - gstreamer1-libav
     # Shell
     - zsh
-    - starshi
+    - starship
     # Media
     - vlc
     - mpv
@@ -109,9 +109,9 @@ install:
     - blueman
     # Themes and fonts
     - papirus-icon-theme
-    - advaita-icon-theme
-    - https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/h/highcontrast-icon-theme-3.28-23.fc43.noarch.rpm
-    - https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/g/gnome-themes-extra-3.28-23.fc43.x86_64.rpm
+    #- adwaita-icon-theme
+    #- https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/h/highcontrast-icon-theme-3.28-23.fc43.noarch.rpm
+    #- https://mirror.de.leaseweb.net/fedora/releases/43/Everything/x86_64/os/Packages/g/gnome-themes-extra-3.28-23.fc43.x86_64.rpm
     - mate-system-monitor
     - sassc
     - jetbrains-mono-fonts-all
